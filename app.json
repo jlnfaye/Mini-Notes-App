@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TaskNavDemo",
-    "slug": "TaskNavDemo",
+    "name": "MiniNotesApp",
+    "slug": "MiniNotesApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -44,6 +44,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ef56ff33-9a97-435e-828b-e2d4282a9eee"
+      }
     }
   }
 }

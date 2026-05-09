@@ -22,7 +22,7 @@ export default function NoteDetailScreen() {
         style={styles.editButton}
         onPress={() =>
           router.push({
-            pathname: "/edit-notes",
+            pathname: "/(tabs)/notes/edit-notes",
             params: { id, title, description, category },
           })
         }

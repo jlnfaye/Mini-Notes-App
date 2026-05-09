@@ -29,13 +29,29 @@ export default function Notes() {
   );
 
   const handleDelete = (id: number) => {
-    try {
-      deleteNote(id);
-      loadNotes();
-    } catch (error) {
-      Alert.alert("Delete Error", "Failed to delete note");
-    }
-  };
+Alert.alert(
+  "Delete Task",
+  "Are you sure you want to delete this task?",
+  [
+  {
+    text: "Cancel",
+    style: "cancel"
+  },
+  {
+    text: "Delete",
+    style: "destructive",
+    onPress: () => {
+      try {
+        deleteNote(id);
+        loadNotes();
+      } catch (error) {
+        Alert.alert("Delete Error", "Failed to delete note");
+      }
+    },
+  },
+  ]
+)
+};
 
   return (
     <View style={styles.container}>
@@ -43,7 +59,7 @@ export default function Notes() {
 
       <Pressable
         style={styles.addButton}
-        onPress={() => router.push("/add-notes")}
+        onPress={() => router.push("/(tabs)/notes/add-notes")}
       >
         <Text style={styles.addButtonText}>Add Notes</Text>
       </Pressable>
@@ -65,7 +81,7 @@ export default function Notes() {
                   style={styles.detailButton}
                   onPress={() =>
                     router.push({
-                      pathname: "/notes-detail",
+                      pathname: "/(tabs)/notes/notes-detail",
                       params: {
                         id: item.id,
                         title: item.title,

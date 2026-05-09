@@ -17,7 +17,7 @@ export default function Index() {
       <Text style={styles.title}>Mini Notes App</Text>
       <Text style={styles.subtitle}>Welcome User!</Text>
 
-      <Pressable style={styles.button} onPress={() => router.push("/notes")}>
+      <Pressable style={styles.button} onPress={() => router.push("/(tabs)/notes/notes")}>
         <Text style={styles.buttonText}>Open Notes</Text>
       </Pressable>
     </View>

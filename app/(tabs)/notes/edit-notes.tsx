@@ -33,7 +33,7 @@ export default function EditNoteScreen() {
 
       updateNote(Number(params.id), title, description, category);
       Alert.alert("Success", "Note updated successfully.");
-      router.replace("/notes");
+      router.replace("/(tabs)/notes/notes");
     } catch (error) {
       Alert.alert(
         "Update Error",
